@@ -145,7 +145,7 @@ function performSearch(query, outputId) {
         container.classList.remove('hidden');
         results.forEach(res => {
             const div = document.createElement('div');
-            div.className = "block p-3 hover:bg-midastouch-50 border-b border-gray-100 last:border-0 cursor-pointer group";
+            div.className = "block p-3 hover:bg-green-50 border-b border-gray-100 last:border-0 cursor-pointer group";
             
             div.onclick = () => {
                 // Determine if the result is on the current page
@@ -168,7 +168,7 @@ function performSearch(query, outputId) {
             };
 
             div.innerHTML = `
-                <div class="font-bold text-charcoaldepths-800 text-sm group-hover:text-midastouch-600 transition-colors">${res.title}</div>
+                <div class="font-bold text-charcoaldepths-800 text-sm group-hover:text-green-600 transition-colors">${res.title}</div>
                 <div class="text-xs text-charcoaldepths-500 mt-1 truncate">${res.content.substring(0, 60)}...</div>
             `;
             container.appendChild(div);
@@ -189,7 +189,7 @@ function scrollToText(text) {
             
             // Optional: Highlight effect
             const originalColor = node.parentElement.style.backgroundColor;
-            node.parentElement.style.backgroundColor = '#f4e4bc'; // Midas touch light
+            node.parentElement.style.backgroundColor = '#dcfce7';
             setTimeout(() => {
                 node.parentElement.style.backgroundColor = originalColor;
             }, 2000);
